@@ -1,0 +1,357 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Primera Aplicacion</title>
+
+<!--grupo CSS-->
+<link rel="stylesheet" href="css/temasapp1.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.icons-1.4.5.min.css"/>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css"/>
+<!--grupo JavaScript-->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/acciones.js"></script>
+<script src="phonegap.js" type="text/javascript"></script>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+</head>
+
+<body onLoad="MM_preloadImages('../../../mitologia.jpg')">
+<div data-role="page" id="Principal" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>VOLCAN POPOCATEPETL</h1>
+</div>
+<!-- Start WOWSlider.com -->
+<iframe src="visor/indexwow.html" style="width:60%;height:50%;max-width:100%;overflow:hidden;border:none;padding:0;margin:0 auto;display:block;" marginheight="0" marginwidth="0"></iframe>
+<!-- End WOWSlider.com -->
+<!--div data-role="main" class="ui-content">
+<div data-role="collapsible" data-content-theme="false">
+<h1>Foto de perfil</h1>
+<div>
+<p> Esta es mi imagen de perfil:
+<br>
+</div>
+<div>
+<img src="imagenes/yo.png" width="50%" height="50%"> </div>
+</div>
+</div-->
+<div> 
+<ul data-role="listview" data-theme="b" class="ui-listview ui-group-theme-b">
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina1" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>UBICACIÓN</h2>
+<p> Se muestra la ubicacion del volcan</p>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina2" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>ALTURA</h2>
+<p>Se muestra la altura del volcan</p>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina3" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>ANTIGÜEDAD</h2>
+<p>Muestra la antigüedad del volcan</p>
+</a>
+</li>
+ <li class="ui-first-child ui-last-child">
+<a href="#Pagina4" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>HISTORIA</h2>
+<p>Muestra la historia del volcan</p>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina5" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>ACTIVIDAD VOLCANICA</h2>
+<p>Muestra la actividad volcanica que ha tenido el volcan</p>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina6" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>MONITOREO</h2>
+<p>Muestra el monitoreo del volcan</p>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina7" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>MEDIDAS DE PREVENCION</h2>
+<p>Muestra las medidas de prevencion en diferentes casos</p>
+</a>
+</li>
+<li class="ui-first-child ui-last-child">
+<a href="#Pagina8" class="ui-btn ui-btn-icon-right ui-icon-carat-r">
+<h2>ZONAS DE RIESGO</h2>
+<p>Muestra imagen de las zonas de riesgo</p>
+</a>
+</li>
+</ul>
+</div>
+<div data-role="footer" align="center" data-theme="a">
+<div>
+<img src="imagenes/volcan.png" width="46" height="46">
+</div>
+<div>
+<h4>Aplicacion tres</h4>
+<h4>Consuelo Coyotl Casasola </h4>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina1" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>Ubicación del Popocatepetl</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<p>El Popocatépetl (en náhuatl: popocatepetl, ‘el cerro que humea’‘popoca, humear; tepetl, cerro’) es un volcán activo localizado en el centro de México, en los límites territoriales de los estados de Morelos, Puebla y México. Se localiza a unos 72 km al sureste de la Ciudad de México, 43 km de Puebla, 63 km de Cuernavaca, y 53 km de Tlaxcala.</p>
+<img src="imagenes/ubicacion.jpg" width="50%" height="50%">
+</div>
+</div>
+<div data-role="footer" data-theme="a">
+<h4>Aplicacion tres, CCC</h4>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina2" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>ALTURA DEL VOLCAN POPOCATEPETL</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<P>Su altura es de 5500 msnm, es de forma cónica, tiene un diámetro de 25 km en su base y la cima es el corte elíptico de un cono y tiene una orientación noreste-suroeste. La distancia entre las paredes de su cráter varía entre los 660 y los 840 m.</P>
+<img src="imagenes/altura.jpg" width="50%" height="50%">
+</div>
+</div>
+<div data-role="footer" data-theme="a">
+<h4>Aplicacion tres, CCC</h4>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina3" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>ANTIGÜEDAD DEL VOLCAN POPOCATEPETL</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<P>El Popocatépetl es un estratovolcán, y los estudios paleomagnéticos que se han hecho de él indican que tiene una edad aproximada de 730 000 años.  </P>
+<img src="imagenes/antiguedad.jpg" width="50%" height="50%">
+</div>
+</div>
+<div data-role="footer" data-theme="a">
+<h4>Aplicacion tres, CCC</h4>
+</div>
+</div>
+</div>
+<div data-role="page" id="Pagina4" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>HISTORIA DEL VOLCAN POPOCATEPETL</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<P>El primer ascenso registrado a este volcán fue hecho mucho antes de la época del Imperio mexica en 1289, por los Tecuanipas; el segundo ascenso hecho por los españoles fue dirigido por Diego de Ordás en 1519, para conseguir azufre para su pólvora.
+El Popocatépetl ha sido uno de los volcanes más activos de México. Desde 1354 se han registrado 18 erupciones. En 1947 ocurrió una erupción de consideración, para iniciar así un periodo de actividad. Después, el 21 de diciembre de 1994 registró una explosión que produjo gas y cenizas que fueron transportados por los vientos dominantes a más de 25 km de distancia. Actualmente su actividad es moderada, pero constante, con emisión defumarolas, compuestas de gases y vapor de agua, y repentinas e imprevistas expulsiones menores de ceniza y material volcánico
+</P>
+<div data-role="main" class="ui-content">
+<div data-role="collapsible" data-content-theme="false">
+<h1>MITOLOGIA</h1>
+<div>
+<p> Leyenda:
+<br>
+</div>
+<div>
+  <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image15','','../../../mitologia.jpg',1)"><img src="../../../antiguedad.jpg" width="300" height="168" id="Image15"></a> </div>
+</div>
+</div>
+
+</div>
+</div>
+<div data-role="footer" data-theme="a">
+<h4>Aplicacion tres, CCC</h4>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina5" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>ACTIVIDAD VOLCANICA</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<P>El Popocatépetl es conocido por sus alta actividad volcánica, que se presenta comúnmente. Desde que se reactivó, en 1997, hasta el momento, ha presentado una serie de erupciones de las cuales la más violenta ha sido la del año 2000, y la última la noche del 4 y madrugada del 5 de noviembre de 2014. El volcán es uno de los más monitoreados del mundo y también es uno de los más peligrosos y que amenaza más de 26 millones de personas.</P>
+<img src="imagenes/actividadvolcanica.jpg" width="50%" height="50%">
+</div>
+</div>
+<div data-role="footer" data-theme="a">
+<h4>Aplicacion tres, CCC</h4>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina6" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>MONITOREO</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<P>Cuatro tipos de monitoreo se han establecido en el volcán: visual, sísmico, geodésico y geoquímico, de los cuales el más importante es el sísmico. La red de monitoreo del Popocatépetl está compuesta por 15 estaciones localizadas en las laderas circundantes del volcán en sitios con altitudes de hasta 4300 m y a 1.5 km del cráter. La instrumentación consta de 8 sismógrafos triaxiales de periodo corto, 4 de banda ancha, 4 inclinómetros biaxiales para medir deformación, una cámara de video con enlace de microondas, un radar doppler meteorológico y diversos equipos para mediciones geodésicas, análisis químicos y determinación de las concentraciones de gases SO2 y CO2. </P>
+<H2>Tipos de monitoreo</H2>
+<div data-role="main" class="ui-content">
+<div data-role="collapsible" data-content-theme="false">
+<h1>MONITOREO VISUAL</h1>
+<div>
+<p> VISUAL:
+<br>
+</div>
+<div>
+<P>Consiste en la detección por medio visual y registros frecuentes de cambios apreciables en un volcán y sus alrededores, como pueden ser: emanación de gases y cenizas, deformaciones, derrumbes y fracturas, etc. </P>
+<img src="imagenes/visual.jpg" width="50%" height="50%"> </div>
+</div>
+</div>
+<div data-role="main" class="ui-content">
+<div data-role="collapsible" data-content-theme="false">
+<h1>MONITOREO SISMICO</h1>
+<div>
+<p> SISMICO:
+<br>
+</div>
+<div>
+<P>Se encarga del estudio de los eventos sísmicos generados por la actividad volcánica. Los instrumentos utilizados para captar y registrar las señales sísmicas son conocidos como sismómetros.</P>
+<img src="imagenes/sismico.jpg" width="50%" height="50%"> </div>
+</div>
+</div>
+<div data-role="main" class="ui-content">
+<div data-role="collapsible" data-content-theme="false">
+<h1>MONITOREO GEODESICO</h1>
+<div>
+<p> GEODESICO:
+<br>
+</div>
+<div>
+<P>. Cuando el magma (liquido, gases, rocas fundidas, etc.) asciende a la superficie ejerce una presión en el interior del volcán causando deformación (inflación o deflación), que es imperceptible al sentido humano. Por tal motivo, se utilizan instrumentos adecuados de medición (GPS, EDM), estación total, etc.) que miden variaciones del orden del milímetro y que pueden alertar la ocurrencia de una probable erupción.</P>
+<img src="imagenes/goedesico.jpg" width="50%" height="50%"> </div>
+</div>
+</div>
+<div data-role="main" class="ui-content">
+<div data-role="collapsible" data-content-theme="false">
+<h1>MONITOREO GEOQUIMICO</h1>
+<div>
+<p> GEOQUIMICO:
+<br>
+</div>
+<div>
+<P>Consisten en muestro de los gases, condensados, temperatura de la fumarola lateral y muestreos de las fuentes termales. Los gases son recolectados siguiendo dos métodos. Las termales se les hacen un seguimiento de T y Ph además de los porcentajes de concentración de los aniones y cationes en ellos encontrados.</P>
+<img src="imagenes/geoquimico.jpg" width="50%" height="50%"> </div>
+</div>
+</div>
+</div>
+</div>
+<div data-role="footer" data-theme="a">
+<h4>Aplicacion tres, CCC</h4>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina7" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>MEDIDAS PREVENTIVAS</h1>
+</div>
+<div data-role="content" align="left">
+<div>
+<div data-role="main" class="ui-content">
+<div data-role="collapsible" data-content-theme="false">
+<h1>EN CASO DE CAIDA DE CENIZA VOLCANICA</h1>
+<div>
+<p>Medidas Preventivas:
+<br>
+</div>
+<div>
+<ol>
+<li> Cerrar bien puertas y ventanas, así como tapar rendijas</li>
+<li>Barre, recoge y deposita en bolsas o costales los acumulados de ceniza. Por ningún motivo la remuevas con agua, esta mezcla hace más pesado el material y al secarse se endurece como el cemento.</li>
+<li>Cubrir nariz y boca (tapabocas y/o paño húmedo).</li>
+<li>Proteger ojos con lentes y/o gafas.</li>
+<li>Tapar bien las fuentes de abastecimiento de agua (tinacos, pozos, aljibes, etc)</li>
+<li>Evitar en lo posible realizar actividades al aire libre.</li>
+<li>Tapar bien los alimentos.</li>
+<li>Permanecer pendientes a la información que se emane de esta situación en los medios de comunicación y por parte de la Coordinación para la Protección
+Civil </li>
+</ol>
+<img src="imagenes/prevencion.jpg" width="50%" height="50%"> </div>
+</div>
+</div>
+<div data-role="main" class="ui-content">
+<div data-role="collapsible" data-content-theme="false">
+<h1>EN CASO DE ERUPCION VOLCANICA</h1>
+<div>
+<p> Medidas Preventivas:
+<br>
+</div>
+<div>
+<ol>
+<li>Mantente alejado de volcanes activos.</li>
+<li>Si vives cerca de un volcán activo, prepara un kit de emergencia que incluya gafas de seguridad, una máscara, una linterna y una radio en buen estado que funcione con pilas.</li>
+<li>Elabora una ruta de evacuación y ten el depósito de gasolina del coche siempre lleno.</li>
+<li>Evacua siguiendo las recomendaciones de las autoridades para no encontrarte lava y barro, así como rocas y escombros que puede arrojar el volcán.</li>
+<li>Evita zonas de ríos y regiones bajas.</li>
+<li>Antes de abandonar tu casa, ponte una camisa de manga larga y pantalones largos; usa gafas de seguridad o normales, sin lentillas. Ponte una máscara de emergencia o envuélvete la cara con un paño húmedo.</li>
+<li>Si no vas a evacuar, cierra puertas y ventanas, y bloquea la chimenea y otros puntos de ventilación para evitar que la ceniza entre en la casa.</li>
+<li>Ten en cuenta que la ceniza puede sobrecargar el tejado y puedes necesitar retirarla.</li>
+<li> Durante la limpieza, lleva elementos de protección</li>
+<li>La ceniza puede dañar motores y piezas metálicas, así que evita conducir. Si debes conducir, no superes los 55 kilómetros por hora.<li>
+</ol>
+<img src="imagenes/prevencion1.jpg" width="50%" height="50%"> </div>
+</div>
+</div>
+
+</div>
+</div>
+<div data-role="footer" data-theme="a">
+<h4>Aplicacion tres, CCC</h4>
+</div>
+</div>
+</div>
+
+<div data-role="page" id="Pagina8" data-add-back-btn="true" data-theme="a">
+<div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
+<h1>ZONAS DE RIESGO</h1>
+</div>
+<div data-role="content" align="center">
+<div>
+<P></P>
+<img src="imagenes/zonasderiesgo.jpg" width="50%" height="50%">
+</div>
+</div>
+<div data-role="footer" data-theme="a">
+<h4>Aplicacion tres, CCC</h4>
+</div>
+</div>
+</div>
+
+
+</body>
+</html>
